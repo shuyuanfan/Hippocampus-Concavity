@@ -3,6 +3,6 @@ function angle= angleforvector(v)
 % v should be 3D vector
 
 psi = atan2(v(2),v(1));
-theta = asin(-v(3)/sqrt(v'*v));
+theta = asin(-v(3)/sqrt(v'*v+eps));
 angle = [theta;psi];
 end
